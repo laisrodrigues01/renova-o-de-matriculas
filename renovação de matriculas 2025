@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovação de Matrículas 2025 - EMTI Laís Rodrigues de Almeida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #002b5c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            width: 100px;
+        }
+        header h1 {
+            font-family: "Georgia", serif;
+            margin: 10px 0 5px;
+        }
+        header p {
+            font-size: 16px;
+            margin: 0;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .info h2 {
+            color: #002b5c;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .turma-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .turma-section h3 {
+            color: #002b5c;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #002b5c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004080;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: #002b5c;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/mnt/data/Cópia de Cópia de FIG (1).png" alt="Logo da escola">
+        <h1>EMTI Laís Rodrigues de Almeida</h1>
+        <p>A Escola Que Voa Alto!</p>
+    </header>
+    <main>
+        <div class="info">
+            <h2>Renovação de Matrículas 2025</h2>
+            <p>Renove a Matrícula e Continue Voando Alto! 🚀</p>
+            <p>Chegou o momento de garantir mais um ano de aprendizado, crescimento e conquistas! Estamos preparando muitas novidades e projetos incríveis para fazer de 2025 um ano ainda mais especial para nossos alunos.</p>
+            <p><strong>🔗 Período de Renovação:</strong> de 06/01/2025 à 10/01/2025</p>
+            <p>Não perca tempo! Garanta já a sua vaga e venha conosco transformar sonhos em realidade. Afinal, aqui é o lugar onde a educação te leva a voar alto! 🌟</p>
+            <p>Agradecemos pela atenção e colaboração!</p>
+            <p>Atenciosamente,<br>EMTI Laís Rodrigues de Almeida<br>A escola que voa alto!</p>
+        </div>
+
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="turma-section">
+                <h3>6ºA</h3>
+                <p><strong>Preencha esta seção apenas se esta for a turma do aluno no ano de 2024!</strong></p>
+                <label for="nome-6A">Nome Completo do Aluno:</label>
+                <input type="text" id="nome-6A" name="nome-6A" required placeholder="Digite o nome completo do aluno" aria-label="Nome Completo do Aluno">
+
+                <label for="nascimento-6A">Data de Nascimento do Aluno:</label>
+                <input type="date" id="nascimento-6A" name="nascimento-6A" required aria-label="Data de Nascimento do Aluno">
+
+                <label for="responsavel-6A">Nome Completo do Responsável:</label>
+                <input type="text" id="responsavel-6A" name="responsavel-6A" required placeholder="Digite o nome completo do responsável" aria-label="Nome Completo do Responsável">
+
+                <label for="parentesco-6A">Grau de Parentesco do Responsável:</label>
+                <select id="parentesco-6A" name="parentesco-6A" aria-label="Grau de Parentesco do Responsável">
+                    <option>Pai</option>
+                    <option>Mãe</option>
+                    <option>Responsável legal (guardião oficial)</option>
+                    <option>Irmão mais velho(a)</option>
+                    <option>Irmã mais velha(a)</option>
+                    <option>Avô</option>
+                    <option>Avó</option>
+                    <option>Tio</option>
+                    <option>Tia</option>
+                    <option>Padrasto</option>
+                    <option>Madrasta</option>
+                </select>
+
+                <label for="renovacao-6A">Deseja Renovar a Matrícula do Aluno para o Ano de 2025?</label>
+                <select id="renovacao-6A" name="renovacao-6A" required aria-label="Deseja Renovar a Matrícula do Aluno para o Ano de 2025">
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+
+                <label for="mudanca-6A">Algum dado de contato ou endereço mudou desde a última matrícula? Se sim, escreva o dado e a informação dele:</label>
+                <textarea id="mudanca-6A" name="mudanca-6A" rows="3" placeholder="Informe as mudanças de contato ou endereço" aria-label="Mudança de contato ou endereço"></textarea>
+
+                <label>
+                    <input type="checkbox" name="confirmacao-6A" required aria-label="Confirmação de informações">
+                    Confirmo que as informações fornecidas estão corretas e estou ciente da renovação de matrícula para o ano de 2025.
+                </label>
+            </div>
+
+            <!-- Adicionar mais seções de turma conforme necessário -->
+
+            <button type="submit">Enviar Formulário</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2025 EMTI Laís Rodrigues de Almeida - Todos os direitos reservados.
+        <div class="footer-links">
+            <a href="https://www.facebook.com">Facebook</a> |
+            <a href="https://www.instagram.com">Instagram</a> |
+            <a href="mailto:contato@emti.com">contato@emti.com</a>
+        </div>
+    </footer>
+</body>
+</html>
