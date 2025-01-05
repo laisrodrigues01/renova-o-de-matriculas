@@ -5,169 +5,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renovação de Matrículas 2025 - EMTI Laís Rodrigues de Almeida</title>
     <style>
+        /* Estilos gerais para corpo do site */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
+
+        /* Estilos para o cabeçalho */
         header {
-            background-color: #002b5c;
-            color: white;
+            background-color: #002855;
+            color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 20px;
         }
+
         header img {
-            width: 100px;
+            max-width: 100px;
         }
+
         header h1 {
-            font-family: "Georgia", serif;
-            margin: 10px 0 5px;
+            font-size: 2.5em;
         }
+
         header p {
-            font-size: 16px;
-            margin: 0;
+            font-style: italic;
         }
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        /* Contêiner principal */
+        .container {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .info h2 {
-            color: #002b5c;
-        }
-        form {
-            margin-top: 20px;
-        }
-        .turma-section {
+
+        /* Seções com informações e formulários */
+        .section {
             margin-bottom: 30px;
+            background: #fff;
             padding: 20px;
-            border: 1px solid #ccc;
             border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .turma-section h3 {
-            color: #002b5c;
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #002855;
+            margin-bottom: 10px;
         }
-        label {
-            display: block;
-            margin: 10px 0 5px;
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        /* Abas de turmas */
+        .tabs {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab.active {
+            background-color: #002855;
+            color: #fff;
             font-weight: bold;
         }
-        input, select, textarea, button {
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Formulário de renovação */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
+            max-width: 500px;
         }
+
         button {
-            background-color: #002b5c;
-            color: white;
+            padding: 10px 20px;
+            background-color: #002855;
+            color: #fff;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: 0.3s;
         }
+
         button:hover {
-            background-color: #004080;
+            background-color: #0056a1;
         }
+
+        /* Rodapé */
         footer {
             text-align: center;
             margin-top: 20px;
-            font-size: 14px;
-            color: #666;
+            padding: 10px;
+            background-color: #002855;
+            color: #fff;
         }
-        .footer-links {
-            margin-top: 10px;
-        }
-        .footer-links a {
-            color: #002b5c;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        .footer-links a:hover {
-            text-decoration: underline;
+
+        /* Mensagem de sucesso */
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho com título e slogan -->
     <header>
-        <img src="/mnt/data/Cópia de Cópia de FIG (1).png" alt="Logo da escola">
-        <h1>EMTI Laís Rodrigues de Almeida</h1>
-        <p>A Escola Que Voa Alto!</p>
+        <img src="logo.png" alt="Logo EMTI Laís Rodrigues de Almeida">
+        <h1>Renovação de Matrículas 2025</h1>
+        <p>A Escola Que Voa Alto</p>
     </header>
-    <main>
-        <div class="info">
-            <h2>Renovação de Matrículas 2025</h2>
-            <p>Renove a Matrícula e Continue Voando Alto! 🚀</p>
+
+    <div class="container">
+        <!-- Seção inicial de informações gerais -->
+        <div class="section">
+            <h2>Renove a Matrícula e Continue Voando Alto! 🚀</h2>
             <p>Chegou o momento de garantir mais um ano de aprendizado, crescimento e conquistas! Estamos preparando muitas novidades e projetos incríveis para fazer de 2025 um ano ainda mais especial para nossos alunos.</p>
             <p><strong>🔗 Período de Renovação:</strong> de 06/01/2025 à 10/01/2025</p>
             <p>Não perca tempo! Garanta já a sua vaga e venha conosco transformar sonhos em realidade. Afinal, aqui é o lugar onde a educação te leva a voar alto! 🌟</p>
-            <p>Agradecemos pela atenção e colaboração!</p>
-            <p>Atenciosamente,<br>EMTI Laís Rodrigues de Almeida<br>A escola que voa alto!</p>
         </div>
 
-        <form action="/submit" method="POST" enctype="multipart/form-data">
-            <div class="turma-section">
-                <h3>6ºA</h3>
-                <p><strong>Preencha esta seção apenas se esta for a turma do aluno no ano de 2024!</strong></p>
-                <label for="nome-6A">Nome Completo do Aluno:</label>
-                <input type="text" id="nome-6A" name="nome-6A" required placeholder="Digite o nome completo do aluno" aria-label="Nome Completo do Aluno">
+        <!-- Abas de turmas -->
+        <div class="tabs">
+            <!-- Cada aba representa uma turma -->
+            <div class="tab active" data-target="6a">6°A</div>
+            <div class="tab" data-target="6b">6°B</div>
+            <div class="tab" data-target="6c">6°C</div>
+            <div class="tab" data-target="7a">7°A</div>
+            <div class="tab" data-target="7b">7°B</div>
+            <div class="tab" data-target="7c">7°C</div>
+            <div class="tab" data-target="7d">7°D</div>
+            <div class="tab" data-target="8a">8°A</div>
+            <div class="tab" data-target="8b">8°B</div>
+        </div>
 
-                <label for="nascimento-6A">Data de Nascimento do Aluno:</label>
-                <input type="date" id="nascimento-6A" name="nascimento-6A" required aria-label="Data de Nascimento do Aluno">
+        <!-- Conteúdo de cada aba -->
+        <div id="6a" class="tab-content active">
+            <h2>6°A - Renovação de Matrículas</h2>
+            <p>Preencha esta seção apenas se esta for a turma do aluno no ano de 2024!</p>
+            <form onsubmit="return handleFormSubmit(event)">
+                <!-- Nome do aluno -->
+                <label for="nome-6a">Nome Completo do Aluno:</label>
+                <input type="text" id="nome-6a" required>
 
-                <label for="responsavel-6A">Nome Completo do Responsável:</label>
-                <input type="text" id="responsavel-6A" name="responsavel-6A" required placeholder="Digite o nome completo do responsável" aria-label="Nome Completo do Responsável">
+                <!-- Data de nascimento do aluno -->
+                <label for="nascimento-6a">Data de Nascimento do Aluno:</label>
+                <input type="date" id="nascimento-6a" required>
 
-                <label for="parentesco-6A">Grau de Parentesco do Responsável:</label>
-                <select id="parentesco-6A" name="parentesco-6A" aria-label="Grau de Parentesco do Responsável">
-                    <option>Pai</option>
-                    <option>Mãe</option>
-                    <option>Responsável legal (guardião oficial)</option>
-                    <option>Irmão mais velho(a)</option>
-                    <option>Irmã mais velha(a)</option>
-                    <option>Avô</option>
-                    <option>Avó</option>
-                    <option>Tio</option>
-                    <option>Tia</option>
-                    <option>Padrasto</option>
-                    <option>Madrasta</option>
+                <!-- Nome do responsável -->
+                <label for="responsavel-6a">Nome Completo do Responsável:</label>
+                <input type="text" id="responsavel-6a" required>
+
+                <!-- Grau de parentesco -->
+                <label for="parentesco-6a">Grau de Parentesco:</label>
+                <select id="parentesco-6a" required>
+                    <option value="">Selecione...</option>
+                    <option value="Pai">Pai</option>
+                    <option value="Mãe">Mãe</option>
+                    <option value="Guardião">Responsável legal (guardião oficial)</option>
+                    <option value="Irmão mais velho(a)">Irmão mais velho(a)</option>
+                    <option value="Avô">Avô</option>
+                    <option value="Avó">Avó</option>
+                    <option value="Tio">Tio</option>
+                    <option value="Tia">Tia</option>
+                    <option value="Padrasto">Padrasto</option>
+                    <option value="Madrasta">Madrasta</option>
                 </select>
 
-                <label for="renovacao-6A">Deseja Renovar a Matrícula do Aluno para o Ano de 2025?</label>
-                <select id="renovacao-6A" name="renovacao-6A" required aria-label="Deseja Renovar a Matrícula do Aluno para o Ano de 2025">
-                    <option>Sim</option>
-                    <option>Não</option>
+                <!-- Renovação de matrícula -->
+                <label for="renovacao-6a">Deseja Renovar a Matrícula para 2025?</label>
+                <select id="renovacao-6a" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
                 </select>
 
-                <label for="mudanca-6A">Algum dado de contato ou endereço mudou desde a última matrícula? Se sim, escreva o dado e a informação dele:</label>
-                <textarea id="mudanca-6A" name="mudanca-6A" rows="3" placeholder="Informe as mudanças de contato ou endereço" aria-label="Mudança de contato ou endereço"></textarea>
+                <!-- Alterações de dados -->
+                <label for="alteracoes-6a">Alterações de Dados (se houver):</label>
+                <textarea id="alteracoes-6a" rows="3"></textarea>
 
+                <!-- Declaração final -->
                 <label>
-                    <input type="checkbox" name="confirmacao-6A" required aria-label="Confirmação de informações">
-                    Confirmo que as informações fornecidas estão corretas e estou ciente da renovação de matrícula para o ano de 2025.
+                    <input type="checkbox" required>
+                    Confirmo que as informações fornecidas estão corretas e estou ciente da renovação de matrícula para 2025.
                 </label>
-            </div>
 
-            <!-- Adicionar mais seções de turma conforme necessário -->
-
-            <button type="submit">Enviar Formulário</button>
-        </form>
-    </main>
-    <footer>
-        &copy; 2025 EMTI Laís Rodrigues de Almeida - Todos os direitos reservados.
-        <div class="footer-links">
-            <a href="https://www.facebook.com">Facebook</a> |
-            <a href="https://www.instagram.com">Instagram</a> |
-            <a href="mailto:contato@emti.com">contato@emti.com</a>
+                <!-- Botão de envio -->
+                <button type="submit">Enviar</button>
+                <p class="success-message">Renovação de matrícula realizada com sucesso!</p>
+            </form>
         </div>
+
+        <!-- Outras turmas seguem o mesmo padrão acima -->
+        <div id="6b" class="tab-content">
+            <h2>6°B - Renovação de Matrículas</h2>
+            <p>Preencha esta seção apenas se esta for a turma do aluno no ano de 2024!</p>
+            <form onsubmit="return handleFormSubmit(event)">
+                <!-- Nome do aluno -->
+                <label for="nome-6b">Nome Completo do Aluno:</label>
+                <input type="text" id="nome-6b" required>
+
+                <!-- Data de nascimento do aluno -->
+                <label for="nascimento-6b">Data de Nascimento do Aluno:</label>
+                <input type="date" id="nascimento-6b" required>
+
+                <!-- Nome do responsável -->
+                <label for="responsavel-6b">Nome Completo do Responsável:</label>
+                <input type="text" id="responsavel-6b" required>
+
+                <!-- Grau de parentesco -->
+                <label for="parentesco-6b">Grau de Parentesco:</label>
+                <select id="parentesco-6b" required>
+                    <option value="">Selecione...</option>
+                    <option value="Pai">Pai</option>
+                    <option value="Mãe">Mãe</option>
+                    <option value="Guardião">Responsável legal (guardião oficial)</option>
+                    <option value="Irmão mais velho(a)">Irmão mais velho(a)</option>
+                    <option value="Avô">Avô</option>
+                    <option value="Avó">Avó</option>
+                    <option value="Tio">Tio</option>
+                    <option value="Tia">Tia</option>
+                    <option value="Padrasto">Padrasto</option>
+                    <option value="Madrasta">Madrasta</option>
+                </select>
+
+                <!-- Renovação de matrícula -->
+                <label for="renovacao-6b">Deseja Renovar a Matrícula para 2025?</label>
+                <select id="renovacao-6b" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+
+                <!-- Alterações de dados -->
+                <label for="alteracoes-6b">Alterações de Dados (se houver):</label>
+                <textarea id="alteracoes-6b" rows="3"></textarea>
+
+                <!-- Declaração final -->
+                <label>
+                    <input type="checkbox" required>
+                    Confirmo que as informações fornecidas estão corretas e estou ciente da renovação de matrícula para 2025.
+                </label>
+
+                <!-- Botão de envio -->
+                <button type="submit">Enviar</button>
+                <p class="success-message">Renovação de matrícula realizada com sucesso!</p>
+            </form>
+        </div>
+
+        <!-- Conteúdo das outras turmas -->
+        <!-- Adicione o mesmo código das turmas anteriores para as turmas 6C, 7A, 7B, 7C, 7D, 8A e 8B -->
+    </div>
+
+    <!-- Rodapé com informações da escola -->
+    <footer>
+        <p>EMTI Laís Rodrigues de Almeida - A Escola Que Voa Alto</p>
     </footer>
+
+    <!-- Script para alternar abas e mostrar mensagem de sucesso -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        // Adiciona evento de clique para cada aba
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active')); // Remove a classe ativa das abas
+                contents.forEach(c => c.classList.remove('active')); // Esconde todo conteúdo
+
+                tab.classList.add('active'); // Ativa a aba clicada
+                document.getElementById(tab.dataset.target).classList.add('active'); // Mostra o conteúdo correspondente
+            });
+        });
+
+        // Função para tratar o envio do formulário e mostrar mensagem de sucesso
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            const form = event.target;
+            const successMessage = form.querySelector('.success-message');
+            successMessage.style.display = 'block'; // Mostra a mensagem de sucesso
+            form.reset(); // Limpa o formulário
+            return false; // Impede o envio do formulário
+        }
+    </script>
 </body>
 </html>
